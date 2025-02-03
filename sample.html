@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Partner Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="java.js" defer></script>
+</head>
+<body class="bg-gray-100 text-center p-10">
+
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Event Partner Finder</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="d-flex ms-auto align-items-center">
+                    <!-- Custom Add Post Button -->
+                    <button id="postButton" title="Add New" class="btn btn-success text-white me-3" style="font-size: 18px; font-weight: bold;">
+                        Post Event
+                    </button>
+
+                    <!-- Username Dropdown -->
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Username
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">user@example.com</a></li>
+                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- The Event Post Form (Initially Hidden) -->
+    <div id="eventForm" style="display: none; margin-top: 80px;">
+        <div class="container">
+            <h2>Enter Event Details</h2>
+            <form id="postEventForm">
+                <div class="mb-3">
+                    <label for="eventName" class="form-label">Event Name:</label>
+                    <input type="text" id="eventName" name="eventName" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="eventDescription" class="form-label">Event Description:</label>
+                    <textarea id="eventDescription" name="eventDescription" class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="eventDate" class="form-label">Event Deadline:</label>
+                    <input type="date" id="eventDate" name="eventDate" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="numMembers" class="form-label">Number of Members:</label>
+                    <input type="number" id="numMembers" name="numMembers" class="form-control" required min="1">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Event</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
